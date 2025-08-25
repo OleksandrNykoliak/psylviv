@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Психологи Львів, Психотерапевти Львів. Найкращі фахівці Львова | Професійна психологічна допомога</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c5aa0;
+            --secondary-color: #3a8b7c;
+            --accent-color: #6cae75;
+            --light-bg: #f8fafc;
+            --dark-text: #2d3748;
+            --light-text: #718096;
+            --white: #ffffff;
+            --shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--dark-text);
+            line-height: 1.6;
+            background: linear-gradient(135deg, #f0f7ff 0%, #f0fff4 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(120deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            padding: 20px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 800;
+        }
+        
+        .logo span {
+            color: #a3e4d7;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        nav ul li a:hover {
+            color: #a3e4d7;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 80px 0;
+            text-align: center;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect fill-opacity="0.05" fill="%232c5aa0" width="50" height="50"/><rect fill-opacity="0.05" fill="%232c5aa0" x="50" y="50" width="50" height="50"/></svg>');
+        }
+        
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+        
+        .hero p {
+            font-size: 20px;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            color: var(--light-text);
+        }
+        
+        .search-box {
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .search-box input {
+            width: 100%;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            box-shadow: var(--shadow);
+        }
+        
+        .search-box button {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .search-box button:hover {
+            background: var(--secondary-color);
+        }
+        
+        /* Filters Section */
+        .filters {
+            background-color: var(--white);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            margin: 40px auto;
+            max-width: 1000px;
+        }
+        
+        .filter-title {
+            text-align: center;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        .filter-options {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .filter-option {
+            background: var(--light-bg);
+            padding: 10px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .filter-option:hover {
+            background: var(--primary-color);
+            color: var(--white);
+        }
+        
+        /* Psychologists Grid */
+        .psychologists-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+        
+        .psychologist-card {
+            background-color: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .psychologist-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card-header {
+            background: linear-gradient(120deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            padding: 20px;
+            position: relative;
+        }
+        
+        .psychologist-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        
+        .psychologist-info {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        
+        .card-body {
+            padding: 20px;
+        }
+        
+        .price {
+            font-weight: 700;
+            color: var(--secondary-color);
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .experience {
+            background-color: #e8f5e9;
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+        
+        .specialization {
+            margin: 15px 0;
+            font-size: 14px;
+        }
+        
+        .specialization span {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        .address {
+            color: var(--light-text);
+            font-style: italic;
+            margin: 15px 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .address i {
+            margin-right: 10px;
+            color: var(--secondary-color);
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            text-align: center;
+        }
+        
+        .btn:hover {
+            background: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+        
+        .btn-view {
+            background: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+            width: 100%;
+            margin-top: 15px;
+        }
+        
+        .btn-view:hover {
+            background: var(--primary-color);
+            color: var(--white);
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(120deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            padding: 50px 0 20px;
+            margin-top: 50px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .footer-section h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-section p, .footer-section a {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 10px;
+            display: block;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-section a:hover {
+            color: var(--white);
+            padding-left: 5px;
+        }
+        
+        .social-icons a {
+            display: inline-block;
+            margin-right: 15px;
+            font-size: 20px;
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Mobile Navigation */
+        .mobile-menu-btn {
+            display: none;
+            font-size: 24px;
+            background: none;
+            border: none;
+            color: var(--white);
+            cursor: pointer;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 20px;
+                flex-direction: column;
+            }
+            
+            nav ul li {
+                margin: 10px 0;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+            
+            .psychologists-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+            
+            nav {
+                display: none;
+            }
+            
+            nav.active {
+                display: block;
+            }
+        }
+        
+        /* Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .psychologist-card {
+            animation: fadeIn 0.5s ease-out;
+        }
+        
+        /* Badges */
+        .badge {
+            display: inline-block;
+            background: var(--accent-color);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 50px;
+            font-size: 12px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Психологи і психотерапевти Львів<span>
+                    </div>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav id="nav">
+                    <ul>
+                        <li><a href="#">Головна</a></li>
+                        <li><a href="#">Про нас</a></li>
+                        <li><a href="#">Блог</a></li>
+                        <li><a href="#">Контакти</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Психологи Львів, Психотерапевти Львів. Найкращі фахівці Львова | Професійна психологічна допомога</h1>
+            <p>Знайдіть кваліфікованого фахівця для вирішення ваших проблем. Перевірені спеціалісти з різними напрямами терапії.</p>
+            <div class="search-box">
+                <input type="text" placeholder="Пошук психолога за іменем а спеціалізацією...">
+                <button>Пошук</button>
+            </div>
+        </div>
+    </section>
+    <!-- Filters Section -->
+    <div class="container">
+        <div class="filters">
+            <h3 class="filter-title">Фільтр психологів, психотерапевтів</h3>
+            <div class="filter-options">
+                <div class="filter-option">Гештальт-терапія</div>
+                <div class="filter-option">Психоаналіз</div>
+                <div class="filter-option">КПТ</div>
+                <div class="filter-option">Дитячий психолог</div>
+                <div class="filter-option">Парна терапія</div>
+                <div class="filter-option">Тривожність</div>
+                <div class="filter-option">Депресія</div>
+                <div class="filter-option">Стосунки</div>
+            </div>
+        </div>
+    </div>
+    <!-- Psychologists Grid -->
+    <div class="container">
+        <div class="psychologists-container">
+            <!-- Psychologist 1 -->
+            <div class="psychologist-card">
+                <div class="card-header">
+                    <h2 class="psychologist-name">Вікторія Петровська</h2>
+                    <div class="psychologist-info">
+                        <span><i class="fas fa-star"></i> 4.9 (28 відгуків)</span>
+                        <span><i class="fas fa-certificate"></i> 3 сертифікати</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p class="price">Індивідуальна терапія - 1200 грн.</p>
+                    <div class="experience">Стаж 4 роки</div>
+                    <div class="specialization">
+                        <span>Спеціалізація:</span> стосунки, нав'язливі думки, вигорання, домашнє насильство
+                    </div>
+                    <p class="address"><i class="fas fa-map-marker-alt"></i> Львів, вулиця Володимира Великого, 22а</p>
+                    <button class="btn btn-view">Детальніше про психолога</button>
+                </div>
+            </div>
+            
+            <!-- Psychologist 2 -->
+            <div class="psychologist-card">
+                <div class="card-header">
+                    <h2 class="psychologist-name">Тетяна Зубрицька</h2>
+                    <div class="psychologist-info">
+                        <span><i class="fas fa-star"></i> 4.8 (35 відгуків)</span>
+                        <span><i class="fas fa-certificate"></i> 22 сертифікати</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p class="price">Індивідуальна терапія - 1200 грн.</p>
+                    <div class="experience">Стаж 7 років</div>
+                    <div class="specialization">
+                        <span>Спеціалізація:</span> депресія, тривога, страхи та фобії, психосоматика
+                    </div>
+                    <p class="address"><i class="fas fa-map-marker-alt"></i> Львів, вулиця Богдана Хмельницького, 40</p>
+                    <button class="btn btn-view">Детальніше про психолога</button>
+                </div>
+            </div>
+            
+            <!-- Psychologist 3 -->
+            <div class="psychologist-card">
+                <div class="card-header">
+                    <h2 class="psychologist-name">Божена Садова</h2>
+                    <div class="psychologist-info">
+                        <span><i class="fas fa-star"></i> 4.7 (19 відгуків)</span>
+                        <span><i class="fas fa-certificate"></i> 10 сертифікатів</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p class="price">Індивідуальна терапія - 1300 грн.</p>
+                    <div class="experience">Стаж 3 роки</div>
+                    <div class="specialization">
+                        <span>Спеціалізація:</span> стосунки, депресія, самооцінка, сором і провина
+                    </div>
+                    <p class="address"><i class="fas fa-map-marker-alt"></i> Львів, вулиця Стрийська, 144</p>
+                    <button class="btn btn-view">Детальніше про психолога</button>
+                </div>
+            </div>
+            
+            <!-- Psychologist 4 -->
+            <div class="psychologist-card">
+                <div class="card-header">
+                    <h2 class="psychologist-name">Елеонора</h2>
+                    <div class="psychologist-info">
+                        <span><i class="fas fa-star"></i> 4.9 (24 відгуки)</span>
+                        <span><i class="fas fa-certificate"></i> 5 сертифікатів</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p class="price">Індивідуальна терапія - 1600 грн.</p>
+                    <div class="experience">Стаж 3 роки</div>
+                    <div class="specialization">
+                        <span>Спеціалізація:</span> стосунки, депресія, самооцінка, самотність
+                    </div>
+                    <p class="address"><i class="fas fa-map-marker-alt"></i> Львів, вулиця Дмитра Данилишина, 2</p>
+                    <button class="btn btn-view">Детальніше про психолога</button>
+                </div>
+            </div>
+            
+            <!-- Psychologist 5 -->
+            <div class="psychologist-card">
+                <div class="card-header">
+                    <h2 class="psychologist-name">Ольга</h2>
+                    <div class="psychologist-info">
+                        <span><i class="fas fa-star"></i> 4.9 (42 відгуки)</span>
+                        <span><i class="fas fa-certificate"></i> 12 сертифікатів</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p class="price">Індивідуальна терапія - 1800 грн.</p>
+                    <div class="experience">Стаж 15 років</div>
+                    <div class="specialization">
+                        <span>Спеціалізація:</span> самооцінка, самовизначення, травма, особистий розвиток
+                    </div>
+                    <p class="address"><i class="fas fa-map-marker-alt"></i> Львів, вулиця Героїв УПА, 73</p>
+                    <button class="btn btn-view">Детальніше про психолога</button>
+                </div>
+            </div>
+            
+            <!-- Psychologist 6 -->
+            <div class="psychologist-card">
+                <div class="card-header">
+                    <h2 class="psychologist-name">Алла</h2>
+                    <div class="psychologist-info">
+                        <span><i class="fas fa-star"></i> 4.8 (38 відгуків)</span>
+                        <span><i class="fas fa-certificate"></i> 14 сертифікатів</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p class="price">Індивідуальна терапія - 1400 грн.</p>
+                    <div class="experience">Стаж 17 років</div>
+                    <div class="specialization">
+                        <span>Спеціалізація:</span> розлуки та втрати, страхи та фобії, дитячо-батьківські стосунки
+                    </div>
+                    <p class="address"><i class="fas fa-map-marker-alt"></i> Львів, вулиця Романчука, 14</p>
+                    <button class="btn btn-view">Детальніше про психолога</button>
+                </div>
+            </div>
+            
+            <!-- Add more psychologists here following the same pattern -->
+            
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Про нас</h3>
+                    <p>Ми допомагаємо знайти найкращих психологів Львова. Усі фахівці ретельно відібрані та мають відповідну кваліфікацію.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Контакти</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Львів, вул. Свободи, 100</p>
+                    <p><i class="fas fa-phone"></i> +380 (99) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@psyhelp.lviv.ua</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Швидкі посилання</h3>
+                    <a href="#">Головна</a>
+                    <a href="#">Про нас</a>
+                    <a href="#">Блог</a>
+                    <a href="#">Контакти</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Соціальні мережі</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; Психологи Львів, Психотерапевти Львів. Найкращі фахівці Львова | Професійна психологічна допомога</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('nav').classList.toggle('active');
+        });
+        
+        // Simple filter functionality
+        const filterOptions = document.querySelectorAll('.filter-option');
+        filterOptions.forEach(option => {
+            option.addEventListener('click', function() {
+                this.classList.toggle('active');
+            });
+        });
+        
+        // Search functionality
+        const searchBox = document.querySelector('.search-box input');
+        const searchBtn = document.querySelector('.search-box button');
+        
+        searchBtn.addEventListener('click', function() {
+            const searchTerm = searchBox.value.toLowerCase();
+            const cards = document.querySelectorAll('.psychologist-card');
+            
+            cards.forEach(card => {
+                const psychologistName = card.querySelector('.psychologist-name').textContent.toLowerCase();
+                const specialization = card.querySelector('.specialization').textContent.toLowerCase();
+                
+                if (psychologistName.includes(searchTerm) || specialization.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
