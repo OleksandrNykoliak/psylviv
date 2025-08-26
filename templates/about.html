@@ -1,0 +1,308 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Про нас | Психологи та психотерапевти Львова | Психологічна допомога</title>
+    <meta name="description" content="Наша місія - зробити якісну психотерапію доступною для кожного. Допомагаємо знайти найкращого психолога у Львові для подолання складних життєвих ситуацій.">
+    <meta name="keywords" content="психологічна допомога львів, психотерапія, ментальне здоров'я, психолог онлайн, підтримка психолога, кризові часи">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      "name": "Про нас - Психологи та психотерапевти Львова",
+      "description": "Наша місія - зробити якісну психотерапію доступною для кожного",
+      "url": "https://psycholog-lviv.space/about"
+    }
+    </script>
+</head>
+<body>
+    <div class="loader" id="loader"></div>
+    
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-brain"></i>
+                    Психолог Львів
+                </div>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav id="nav">
+                    <ul>
+                        <li><a href="{% url 'homepage' %}">Головна</a></li>
+                        <li><a href="#" class="active">Про нас</a></li>
+                        <li><a href="#">Блог</a></li>
+                        <li><a href="#">Контакти</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button class="theme-toggle" id="themeToggle">
+                        <span></span>
+                    </button>
+                    <a href="#" class="btn">Увійти</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <!-- Hero Section -->
+        <section class="about-hero">
+            <div class="container">
+                <div class="about-hero-content">
+                    <h1>Наша місія - ваше психічне здоров'я</h1>
+                    <p>Ми віримо, що кожна людина заслуговує на підтримку та розуміння, особливо в непрості часи</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Mission Section -->
+        <section class="about-mission">
+            <div class="container">
+                <div class="mission-grid">
+                    <div class="mission-content">
+                        <h2>Чому психотерапія важлива саме зараз?</h2>
+                        <p>У сучасному світі, наповненому стресами, невизначеністю та постійними змінами, психічне здоров'я стає найважливішим ресурсом для якісного життя. Ми створюємо простір, де кожен може знайти професійну підтримку та інструменти для зміцнення свого психічного благополуччя.</p>
+                        <p>Наша платформа об'єднує найкращих фахівців Львова, щоб допомогти вам знайти саме того терапевта, з яким ви будете відчувати себе безпечно та зрозуміло.</p>
+                    </div>
+                    <div class="mission-image">
+                        <img src="{% static 'images/about-mission.jpg' %}" alt="Психологічна підтримка у складні часи" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Values Section -->
+        <section class="about-values">
+            <div class="container">
+                <h2>Наші цінності</h2>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Емпатія та підтримка</h3>
+                        <p>Ми розуміємо, як важко звертатися по допомогу, тому створюємо максимально комфортне середовище для кожного клієнта.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Конфіденційність</h3>
+                        <p>Ваша безпека та конфіденційність - наш пріоритет. Всі наші фахівці дотримуються строгих правил етики.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3>Професійність</h3>
+                        <p>Ми ретельно відбираємо кожного спеціаліста, перевіряючи їхню кваліфікацію та досвід роботи.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-hand-holding-heart"></i>
+                        </div>
+                        <h3>Доступність</h3>
+                        <p>Прагнемо зробити якісну психологічну допомогу доступною для кожного, хто її потребує.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Team Section -->
+        <section class="about-team">
+            <div class="container">
+                <h2>Наша команда</h2>
+                <p class="team-subtitle">Професійні психологи та психотерапевти, які працюють з нами</p>
+                
+                <div class="team-grid">
+                    <div class="team-member">
+                        <img src="{% static 'photo/bozhenasadova.jpeg' %}" alt="Божена Садова - психолог-психотерапевт" loading="lazy">
+                        <h3>Божена Садова</h3>
+                        <p>Психолог-психотерапевт, спеціалізація: стосунки, нав'язливі думки, вигорання</p>
+                    </div>
+                    
+                    <div class="team-member">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Андрій Іванов - психотерапевт" loading="lazy">
+                        <h3>Андрій Іванов</h3>
+                        <p>Психотерапевт, спеціалізація: депресія, тривога, страхи та фобії</p>
+                    </div>
+                    
+                    <div class="team-member">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Марія Коваль - психолог" loading="lazy">
+                        <h3>Марія Коваль</h3>
+                        <p>Психолог, спеціалізація: стосунки, самооцінка, сором і провина</p>
+                    </div>
+                </div>
+                
+                <div class="team-cta">
+                    <a href="{% url 'homepage' %}" class="btn btn-large">Переглянути всіх спеціалістів</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Impact Section -->
+        <section class="about-impact">
+            <div class="container">
+                <h2>Наш вплив</h2>
+                <div class="impact-stats">
+                    <div class="stat">
+                        <span class="stat-number" data-count="500">0</span>
+                        <span class="stat-label">клієнтів отримали допомогу</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="98">0</span>
+                        <span class="stat-label">% клієнтів рекомендують нас</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="25">0</span>
+                        <span class="stat-label">кваліфікованих фахівців</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="1000">0</span>
+                        <span class="stat-label">годин терапії проведено</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="about-cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Готові почати свою путь до психічного благополуччя?</h2>
+                    <p>Знайдіть свого психолога вже сьогодні та зробіть перший крок до кращого якості життя</p>
+                    <a href="{% url 'homepage' %}" class="btn btn-large">Підібрати спеціаліста</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Про нас</h3>
+                    <p>Ми допомагаємо знайти найкращих психологів та психотерапевтів Львова. Усі фахівці ретельно відібрані та мають відповідну кваліфікацію для надання психологічної допомоги.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Контакти психологічної служби у Львові</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Львів, вул. Свободи, 100</p>
+                    <p><i class="fas fa-phone"></i> +380 (99) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@psyhelp.lviv.ua</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Швидкі посилання</h3>
+                    <a href="{% url 'homepage' %}">Головна</a>
+                    <a href="#">Про нас</a>
+                    <a href="#">Блог</a>
+                    <a href="#">Контакти</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Соціальні мережі</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Психологи та психотерапевти Львова - професійна психологічна допомога у Львові</p>
+            </div>
+        </div>
+    </footer>
+    
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('nav').classList.toggle('active');
+        });
+        
+        // Theme toggle
+        const themeToggle = document.getElementById('themeToggle');
+        themeToggle.addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            themeToggle.classList.toggle('dark');
+            
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        });
+        
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-mode');
+            themeToggle.classList.add('dark');
+        }
+        
+        // Back to top button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Loading animation
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('loader').style.display = 'none';
+            }, 1000);
+            
+            // Animate statistics
+            animateStatistics();
+        });
+        
+        // Statistics animation
+        function animateStatistics() {
+            const statElements = document.querySelectorAll('.stat-number');
+            
+            statElements.forEach(stat => {
+                const target = parseInt(stat.getAttribute('data-count'));
+                const duration = 2000;
+                const steps = 100;
+                const increment = target / steps;
+                let current = 0;
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        stat.textContent = target;
+                        clearInterval(timer);
+                    } else {
+                        stat.textContent = Math.round(current);
+                    }
+                }, duration / steps);
+            });
+        }
+    </script>
+</body>
+</html>
