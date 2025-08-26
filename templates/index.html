@@ -36,7 +36,7 @@
                 </button>
                 <nav id="nav">
                     <ul>
-                        <li><a href="#">Головна</a></li>
+                        <li><a href="{% url 'homepage' %}">Головна</a></li>
                         <li><a href="#">Про нас</a></li>
                         <li><a href="#">Блог</a></li>
                         <li><a href="#">Контакти</a></li>
@@ -102,9 +102,13 @@
             <div class="psychologists-container" id="psychologistsContainer">
                 <div class="psychologist-card" itemscope itemtype="https://schema.org/Person">
                     <div class="card-header">
-                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Психолог Оксана Петренко - фахівець зі стосунків у Львові" class="psychologist-avatar" itemprop="image">
+                        <img src="{% static 'photo/bozhenasadova.jpeg' %}" 
+                        alt="Психолог-психотерапевт Божена Садова - фахівець зі стосунків у Львові" 
+                        class="psychologist-avatar" 
+                        itemprop="image">
+
                         <div class="psychologist-info">
-                            <h2 class="psychologist-name" itemprop="name">Оксана Петренко</h2>
+                            <h2 class="psychologist-name" itemprop="name">Божена Садова</h2>
                             <div class="rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -116,7 +120,7 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <p class="price"><i class="fas fa-comment-dots"></i> Індивідуальна терапія - 1200 грн.</p>
+                        <p class="price"><i class="fas fa-comment-dots"></i> Індивідуальна терапія - 1500 грн.</p>
                         <div class="experience"><i class="fas fa-briefcase"></i> Стаж 4 роки</div>
                         <div class="specialization">
                             <span>Спеціалізація:</span>
@@ -130,7 +134,7 @@
                         <p class="address"><i class="fas fa-map-marker-alt"></i> Львів, вулиця Володимира Великого, 22а</p>
                         <div class="card-footer">
                             <button class="btn-favorite"><i class="far fa-heart"></i></button>
-                            <button class="btn btn-view">Детальніше</button>
+                            <a href="{% url 'bozhena-sadova' %}" class="btn btn-view">Детальніше</a>
                         </div>
                     </div>
                 </div>
@@ -327,7 +331,7 @@
                 </div>
                 <div class="footer-section">
                     <h3>Швидкі посилання</h3>
-                    <a href="#">Головна</a>
+                    <a href="{% url 'homepage' %}">Головна</a>
                     <a href="#">Про нас</a>
                     <a href="#">Блог</a>
                     <a href="#">Контакти</a>
